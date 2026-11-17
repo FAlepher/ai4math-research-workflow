@@ -56,4 +56,6 @@ workflow.py, demo.py, tests/   Synthetic Python workflow and tests
 
 ## Author and license
 
-Maintained by [FAlepher](https://github.com/FAlepher). The researcher led the original extension's design, with AI assistance in coding and debugging. The offline adaptation, tests and documentation were prepared with AI assistance during this review. The candidate project uses the [MIT License](LICENSE); excluded original implementation, private research archives and third-party material are not included under that license.
+Maintained by [FAlepher](https://github.com/FAlepher). The researcher led the original extension's design, with AI assistance in coding and debugging. The offline adaptation, tests and documentation were prepared with AI assistance during this review.
+
+All files in this repository, including the source excerpts in `review/original-excerpts.js`, are licensed under the [MIT License](LICENSE). The unpublished remainder of the original extension and private research archives are not distributed here.
