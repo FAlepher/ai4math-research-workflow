@@ -1,0 +1,3 @@
+textarea { width: 100%; margin: 4px 0 8px; padding: 6px; resize: vertical; }
+.btnrow button { flex: 1; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; }

@@ -1,0 +1,8 @@
+{
+  "manifest_version": 3,
+  "name": "Research Workflow — Offline Example",
+  "version": "0.1.0",
+  "description": "Local, synthetic example of research task coordination.",
+  "permissions": ["storage"],
+  "action": {"default_popup": "popup.html"}
+}

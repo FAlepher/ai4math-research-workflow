@@ -1,0 +1,110 @@
+:root {
+  --bg: #1b1b1f;
+  --card: #26262c;
+  --fg: #e8e8ea;
+  --muted: #9a9aa6;
+  --line: #3a3a44;
+  --accent: #4a8cff;
+  --warn: #d68910;
+  --bad: #c0392b;
+  --ok: #2e9e5b;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f6f6f8; --card: #ffffff; --fg: #1c1c1e; --muted: #6b6b76;
+    --line: #e0e0e6;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  width: 380px;
+  margin: 0;
+  padding: 10px;
+  background: var(--bg);
+  color: var(--fg);
+  font: 13px/1.5 system-ui, "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+
+header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 8px;
+}
+h1 { font-size: 14px; margin: 0; font-weight: 600; }
+h2 { font-size: 12px; margin: 0 0 6px; color: var(--muted); font-weight: 600; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+
+.pill {
+  font-size: 11px; padding: 2px 8px; border-radius: 999px;
+  background: var(--line); color: var(--muted);
+}
+.pill.ok   { background: rgba(46,158,91,.18);  color: var(--ok); }
+.pill.warn { background: rgba(214,137,16,.18); color: var(--warn); }
+.pill.bad  { background: rgba(192,57,43,.18);  color: var(--bad); }
+
+.relay { display: flex; align-items: center; gap: 6px; margin-bottom: 8px; }
+.relay label { flex: 1; display: flex; flex-direction: column; gap: 3px;
+               font-size: 11px; color: var(--muted); }
+.arrow { color: var(--muted); padding-top: 14px; }
+
+select {
+  width: 100%; padding: 5px 6px; border-radius: 6px;
+  border: 1px solid var(--line); background: var(--bg); color: var(--fg);
+  font-size: 12px;
+}
+
+button {
+  border: 1px solid var(--line); background: var(--bg); color: var(--fg);
+  border-radius: 6px; padding: 6px 10px; cursor: pointer; font-size: 12px;
+}
+button:hover { border-color: var(--accent); }
+button.primary { width: 100%; background: var(--accent); border-color: var(--accent);
+                 color: #fff; font-weight: 600; padding: 8px; }
+.btnrow { display: flex; gap: 6px; align-items: stretch; }
+.btnrow .primary { flex: 1; }
+button.mini2 { white-space: nowrap; padding: 8px 10px; }
+button.primary:disabled { opacity: .5; cursor: not-allowed; }
+button.mini { float: right; padding: 1px 6px; font-size: 11px; }
+
+.status { margin-top: 8px; font-size: 12px; min-height: 0; }
+.status.ok   { color: var(--ok); }
+.status.bad  { color: var(--bad); }
+.status.warn { color: var(--warn); }
+
+.list { list-style: none; margin: 0; padding: 0; }
+.list li {
+  padding: 5px 0; border-top: 1px solid var(--line);
+  display: flex; justify-content: space-between; gap: 8px;
+}
+.list li:first-child { border-top: none; }
+.list .name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.list .meta { color: var(--muted); font-size: 11px; white-space: nowrap; }
+
+/* 标签页已经关掉的窗口 —— 灰掉，提示它不能作为目标 */
+.list li.off .name,
+.list li.off .meta { opacity: .45; }
+
+.muted { color: var(--muted); font-size: 11px; font-weight: normal; }
+
+select.mini-sel {
+  width: auto; display: inline-block; padding: 0 4px; font-size: 11px;
+  margin-left: 6px; vertical-align: middle;
+}
+footer { padding: 2px 4px; }
+
+/* ── 多路线：每条线一块 ── */
+.cycleblock { border-top: 1px solid rgba(128,128,128,.25); padding: 8px 0 4px; }
+.cycleblock:first-child { border-top: 0; padding-top: 2px; }
+.cychead { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+.cychead b { font-size: 13px; }
+.cychead .pill { margin-left: auto; }
+.cychead button { margin-left: 6px; padding: 2px 10px; font-size: 12px; }

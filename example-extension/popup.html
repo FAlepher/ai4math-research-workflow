@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Research Workflow — Offline Example</title>
+  <link rel="stylesheet" href="original-popup.css">
+  <link rel="stylesheet" href="sample.css">
+</head>
+<body>
+  <header><h1>Research workflow</h1><span class="pill">Offline example</span></header>
+  <p class="muted">Synthetic messages only. No model, webpage or account is connected.</p>
+  <section class="card">
+    <h2>Coordinator</h2>
+    <label for="task">Example task</label>
+    <textarea id="task" rows="2">Investigate the example claim and identify any gap.</textarea>
+    <button id="start" class="primary">Start a round</button>
+  </section>
+  <section class="card">
+    <h2>Research and integration</h2>
+    <p class="muted">Use the buttons to supply fixed example results. These are not model responses.</p>
+    <div class="btnrow"><button id="research">Research result</button><button id="integration">Integration result</button></div>
+    <p id="roles" aria-live="polite"></p>
+    <button id="join" class="primary">Join available results</button>
+  </section>
+  <section class="card">
+    <h2>Round status</h2>
+    <p id="status" aria-live="polite">Create a round to begin.</p>
+    <pre id="result"></pre>
+    <button id="reset">Clear example</button>
+  </section>
+  <script src="simulator.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
